@@ -26,14 +26,14 @@ const OUTCOME_MAP = {
 }
 
 function points_from_round(opponent_move, needed_outcome) {
-  let decoded_outcome = OUTCOME_MAP[needed_outcome];
+  let decoded_outcome = OUTCOME_MAP[needed_outcome]; // just for readability convert X/Y/Z to lose/draw/win
   let my_move = COUNTER_MOVES_MAP[decoded_outcome][opponent_move];
 
   return POINTS_FOR_MOVES[my_move] + POINTS_FOR_OUTCOME[decoded_outcome];
 }
 
-let total_points = input.reduce((total, i) => {
-    return total + points_from_round(...i.split(" "));
+let total_points = input.reduce((total, round) => {
+    return total + points_from_round(...round.split(" "));
   }, 0);
 
 console.log(total_points);
