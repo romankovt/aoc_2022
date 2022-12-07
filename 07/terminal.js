@@ -69,8 +69,6 @@ function findLeafForCurrentPath(tree) {
   return leaf;
 };
 
-input.forEach(line => { isCommand(line) ? handleCommand(line) : logFileSize(line) });
-
 function calcTotal(tree) {
   let counter = 0;
 
@@ -105,6 +103,8 @@ function findCandidateToDelete(tree, needSpace) {
 
   return candidate
 }
+
+input.forEach(line => { isCommand(line) ? handleCommand(line) : logFileSize(line) });
 
 console.log(`Sum of dirs under 100_000: ${calcTotal(tree["/"])}`); // 1307902
 let unusedSpace = TOTAL_SPACE - tree["/"]["size"];
