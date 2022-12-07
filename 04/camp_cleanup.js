@@ -29,7 +29,7 @@ input.forEach(elfPair => {
     partiallyOverllapingRanges.push(elfPair);
   } else if (sectionPartiallyOverlap(firstElfSections, secondElfSections)) {
     partiallyOverllapingRanges.push(elfPair);
-  };
+  }
 });
 
 // console.log(fullyOverllapingRanges);

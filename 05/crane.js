@@ -34,16 +34,16 @@ function moveCrates9000(amount, from, to) {
     crate = stack[from].pop();
     stack[to].push(crate);
   }
-};
+}
 
 // second part of the task
 function moveCrates9001(amount, from, to) {
   let crates = stack[from].splice(-amount, amount)
   stack[to].push(...crates);
-};
+}
 
 for (let i = 0; i < input[bottomLineStackIndex].length; i++) {
-  if (digit.test(input[bottomLineStackIndex][i])) { collectCrates(i) };
+  if (digit.test(input[bottomLineStackIndex][i])) { collectCrates(i) }
 }
 
 input.slice(bottomLineStackIndex + 2, input.length).forEach(line => {

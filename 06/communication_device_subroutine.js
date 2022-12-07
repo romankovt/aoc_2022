@@ -17,6 +17,7 @@ for (let i = 4; i < input.length; i++)  {
 }
 
 console.time("second loop took");
+
 for (let i = 14; i < input.length; i++)  {
   slidingArray = input.substring(i - 14, i).split("");
 

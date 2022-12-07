@@ -10,7 +10,7 @@ function priorityForChar(char) {
     return char.charCodeAt(0) - "A".charCodeAt(0) + 27;
   } else {
     return char.charCodeAt(0) - "a".charCodeAt(0) + 1;
-  };
+  }
 }
 
 // First part of the puzzle
