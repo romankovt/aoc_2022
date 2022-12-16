@@ -36,7 +36,7 @@ function calcTreeStat(x, y) {
 
 
   // check left
-  for(let i = x - 1; i >= 0; i--) {
+  for (let i = x - 1; i >= 0; i--) {
     leftScenic++;
 
     if (treeHeight <= treeGrid[y][i]) {
@@ -48,7 +48,7 @@ function calcTreeStat(x, y) {
   }
 
   // check right
-  for(let i = x + 1; i < treeGrid[y].length; i++) {
+  for (let i = x + 1; i < treeGrid[y].length; i++) {
     rightScenic++;
 
     if (treeHeight <= treeGrid[y][i]) {
@@ -60,7 +60,7 @@ function calcTreeStat(x, y) {
     }
   }
 
-  for(let i = y + 1; i < treeGrid.length; i++) {
+  for (let i = y + 1; i < treeGrid.length; i++) {
     downScenic++;
 
     if (treeHeight <= treeGrid[i][x]) {
